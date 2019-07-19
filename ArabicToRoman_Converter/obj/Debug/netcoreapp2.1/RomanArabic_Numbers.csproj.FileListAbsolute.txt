@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\RomanArabic_Numbers\RomanArabic_Numbers\bin\Debug\netcoreapp2.1\RomanArabic_Numbers.deps.json
+C:\Users\User\source\repos\RomanArabic_Numbers\RomanArabic_Numbers\bin\Debug\netcoreapp2.1\RomanArabic_Numbers.runtimeconfig.json
+C:\Users\User\source\repos\RomanArabic_Numbers\RomanArabic_Numbers\bin\Debug\netcoreapp2.1\RomanArabic_Numbers.runtimeconfig.dev.json
+C:\Users\User\source\repos\RomanArabic_Numbers\RomanArabic_Numbers\bin\Debug\netcoreapp2.1\RomanArabic_Numbers.dll
+C:\Users\User\source\repos\RomanArabic_Numbers\RomanArabic_Numbers\bin\Debug\netcoreapp2.1\RomanArabic_Numbers.pdb
+C:\Users\User\source\repos\RomanArabic_Numbers\RomanArabic_Numbers\obj\Debug\netcoreapp2.1\RomanArabic_Numbers.csprojAssemblyReference.cache
+C:\Users\User\source\repos\RomanArabic_Numbers\RomanArabic_Numbers\obj\Debug\netcoreapp2.1\RomanArabic_Numbers.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\RomanArabic_Numbers\RomanArabic_Numbers\obj\Debug\netcoreapp2.1\RomanArabic_Numbers.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\RomanArabic_Numbers\RomanArabic_Numbers\obj\Debug\netcoreapp2.1\RomanArabic_Numbers.AssemblyInfo.cs
+C:\Users\User\source\repos\RomanArabic_Numbers\RomanArabic_Numbers\obj\Debug\netcoreapp2.1\RomanArabic_Numbers.dll
+C:\Users\User\source\repos\RomanArabic_Numbers\RomanArabic_Numbers\obj\Debug\netcoreapp2.1\RomanArabic_Numbers.pdb
