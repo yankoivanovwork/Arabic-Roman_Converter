@@ -32,8 +32,6 @@ namespace RomanToArabic_Converter
 
             for (int i = 0; i < entryRomanNumber.Length; i++)
             {
-                dictionaryPosition = 0;
-
                 //I, X, C
                 if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.FirstOrDefault() || entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(2) || entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(4))
                 {
