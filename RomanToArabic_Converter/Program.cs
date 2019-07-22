@@ -20,43 +20,49 @@ namespace RomanToArabic_Converter
         static void Main(string[] args)
         {
             string entryRomanNumber = Console.ReadLine().ToUpper();
+            int convertedNumber = RomanToArabic_Converter(entryRomanNumber);
+
+            Console.WriteLine(convertedNumber);
+        }
+
+        private static int RomanToArabic_Converter(string entryRomanNumber)
+        {
             int convertedArabicNumber = 0;
+            int dictionaryPosition = 0;
 
             for (int i = 0; i < entryRomanNumber.Length; i++)
             {
-                //entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(4) ||
-                if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(2)) // || entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.FirstOrDefault())
+                dictionaryPosition = 0;
+
+                //I, X, C
+                if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.FirstOrDefault() || entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(2) || entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(4))
                 {
-                    if (entryRomanNumber.ElementAtOrDefault(i) == entryRomanNumber.ElementAtOrDefault(i + 1) & entryRomanNumber.ElementAtOrDefault(i + 1) != romanNumbers.Keys.FirstOrDefault())
+                    if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.FirstOrDefault())
+                        dictionaryPosition = 1;
+                    else if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(2))
+                        dictionaryPosition = 3;
+                    else
+                        dictionaryPosition = 5;
+
+                    if (entryRomanNumber.ElementAtOrDefault(i + 1) == romanNumbers.Keys.ElementAtOrDefault(dictionaryPosition))
                     {
-                        convertedArabicNumber += entryRomanNumber.ElementAtOrDefault(i);
+                        convertedArabicNumber += romanNumbers[romanNumbers.Keys.ElementAtOrDefault(dictionaryPosition)] - romanNumbers[romanNumbers.Keys.ElementAtOrDefault(dictionaryPosition - 1)];
+                        i += 1;
                         continue;
                     }
-                    else
+
+                    if (entryRomanNumber.ElementAtOrDefault(i + 1) == romanNumbers.Keys.ElementAtOrDefault(dictionaryPosition + 1))
                     {
-                        convertedArabicNumber -= entryRomanNumber.ElementAtOrDefault(i);
+                        convertedArabicNumber += romanNumbers[romanNumbers.Keys.ElementAtOrDefault(dictionaryPosition + 1)] - romanNumbers[romanNumbers.Keys.ElementAtOrDefault(dictionaryPosition - 1)];
+                        i += 1;
                         continue;
                     }
                 }
-
-                if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.FirstOrDefault())
-                {
-                    if (entryRomanNumber.ElementAtOrDefault(i + 1) == romanNumbers.Keys.ElementAtOrDefault(1))
-                    {
-                        convertedArabicNumber -= 1;
-                        continue;
-                    }
-                    else
-                    {
-                        convertedArabicNumber += entryRomanNumber.Substring(entryRomanNumber.IndexOf(entryRomanNumber.ElementAtOrDefault(i)),entryRomanNumber.Length- entryRomanNumber.IndexOf(entryRomanNumber.ElementAtOrDefault(i))).Length * 1;
-                        continue;
-                    }
-                }
-
+                
                 convertedArabicNumber += romanNumbers[entryRomanNumber.ElementAtOrDefault(i)];
             }
 
-            Console.WriteLine(convertedArabicNumber);
+            return convertedArabicNumber;
         }
     }
 }

@@ -8,4 +8,3 @@ C:\Users\User\source\repos\RomanArabic_Numbers\RomanToArabic_Converter\obj\Debug
 C:\Users\User\source\repos\RomanArabic_Numbers\RomanToArabic_Converter\obj\Debug\netcoreapp2.1\RomanToArabic_Converter.AssemblyInfo.cs
 C:\Users\User\source\repos\RomanArabic_Numbers\RomanToArabic_Converter\obj\Debug\netcoreapp2.1\RomanToArabic_Converter.dll
 C:\Users\User\source\repos\RomanArabic_Numbers\RomanToArabic_Converter\obj\Debug\netcoreapp2.1\RomanToArabic_Converter.pdb
-C:\Users\User\source\repos\RomanArabic_Numbers\RomanToArabic_Converter\obj\Debug\netcoreapp2.1\RomanToArabic_Converter.csprojAssemblyReference.cache
