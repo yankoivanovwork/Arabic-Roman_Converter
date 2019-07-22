@@ -17,23 +17,23 @@ namespace ArabicToRoman_Converter
             { 'M', 1000 }
         };
 
-        static void Main(string[] args)
+        static void Main()
         {
             int entryNumber;
 
-            if (int.TryParse(Console.ReadLine(), out entryNumber) & entryNumber >= 1 & entryNumber <= 500)
+            if (int.TryParse(Console.ReadLine(), out entryNumber) && entryNumber >= 1 & entryNumber <= 500)
             {
                 string convertedRomanNumber = string.Empty;
 
-                convertedRomanNumber += CalculateArabDigits(entryNumber / 100, 2);
-                convertedRomanNumber += CalculateArabDigits(((entryNumber % 100) - (entryNumber % 10)) / 10, 1);
-                convertedRomanNumber += CalculateArabDigits(entryNumber % 10, 0);
+                convertedRomanNumber += CalculateRomanNumber(entryNumber / 100, 2);
+                convertedRomanNumber += CalculateRomanNumber(((entryNumber % 100) - (entryNumber % 10)) / 10, 1);
+                convertedRomanNumber += CalculateRomanNumber(entryNumber % 10, 0);
 
                 Console.WriteLine(convertedRomanNumber);
             }
         }
 
-        private static string CalculateArabDigits(int entryNumber, int digitPosition)
+        private static string CalculateRomanNumber(int entryNumber, int digitPosition)
         {
             string convertedRomanNumber = string.Empty;
 

@@ -14,28 +14,28 @@ namespace RomanToArabic_Converter
             { 'L', 50 }, //3
             { 'C', 100 }, //4
             { 'D', 500 }, //5
-            { 'M', 1000 } //6
         };
 
         static void Main(string[] args)
         {
             string entryRomanNumber = Console.ReadLine().ToUpper();
-            int convertedNumber = RomanToArabic_Converter(entryRomanNumber);
+
+            int convertedNumber = CalculateArabDigits(entryRomanNumber);
 
             Console.WriteLine(convertedNumber);
         }
 
-        private static int RomanToArabic_Converter(string entryRomanNumber)
+        private static int CalculateArabDigits(string entryRomanNumber)
         {
             int convertedArabicNumber = 0;
             int dictionaryPosition = 0;
 
             for (int i = 0; i < entryRomanNumber.Length; i++)
             {
-                dictionaryPosition = 0;
-
-                //I, X, C
-                if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.FirstOrDefault() || entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(2) || entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(4))
+                // I, X, C
+                if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.FirstOrDefault() 
+                    || entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(2) 
+                    || entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(4))
                 {
                     if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.FirstOrDefault())
                         dictionaryPosition = 1;
