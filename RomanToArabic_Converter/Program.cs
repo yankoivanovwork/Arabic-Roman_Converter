@@ -32,7 +32,7 @@ namespace RomanToArabic_Converter
 
             for (int i = 0; i < entryRomanNumber.Length; i++)
             {
-                //I, X, C
+                // I, X, C
                 if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.FirstOrDefault() || entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(2) || entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.ElementAtOrDefault(4))
                 {
                     if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.FirstOrDefault())
