@@ -79,7 +79,7 @@ namespace RomanArabic_Converter
 
             for (int i = 0; i < entryRomanNumber.Length; i++)
             {
-                if (!char.IsPunctuation(entryRomanNumber.ElementAtOrDefault(i)) & !char.IsSeparator(entryRomanNumber.ElementAtOrDefault(i)))
+                if (!char.IsPunctuation(entryRomanNumber.ElementAtOrDefault(i)) && !char.IsSeparator(entryRomanNumber.ElementAtOrDefault(i)))
                 {
                     // I, X, C
                     if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.FirstOrDefault()
