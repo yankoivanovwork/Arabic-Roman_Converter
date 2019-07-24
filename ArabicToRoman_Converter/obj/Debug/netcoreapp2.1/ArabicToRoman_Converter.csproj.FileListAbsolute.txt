@@ -13,7 +13,6 @@ C:\Users\User\source\repos\RomanArabic_Numbers\ArabicToRoman_Converter\bin\Debug
 C:\Users\User\source\repos\RomanArabic_Numbers\ArabicToRoman_Converter\bin\Debug\netcoreapp2.1\ArabicToRoman_Converter.runtimeconfig.dev.json
 C:\Users\User\source\repos\RomanArabic_Numbers\ArabicToRoman_Converter\bin\Debug\netcoreapp2.1\ArabicToRoman_Converter.dll
 C:\Users\User\source\repos\RomanArabic_Numbers\ArabicToRoman_Converter\bin\Debug\netcoreapp2.1\ArabicToRoman_Converter.pdb
-C:\Users\User\source\repos\RomanArabic_Numbers\ArabicToRoman_Converter\obj\Debug\netcoreapp2.1\ArabicToRoman_Converter.csprojAssemblyReference.cache
 C:\Users\User\source\repos\RomanArabic_Numbers\ArabicToRoman_Converter\obj\Debug\netcoreapp2.1\ArabicToRoman_Converter.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\RomanArabic_Numbers\ArabicToRoman_Converter\obj\Debug\netcoreapp2.1\ArabicToRoman_Converter.AssemblyInfoInputs.cache
 C:\Users\User\source\repos\RomanArabic_Numbers\ArabicToRoman_Converter\obj\Debug\netcoreapp2.1\ArabicToRoman_Converter.AssemblyInfo.cs
