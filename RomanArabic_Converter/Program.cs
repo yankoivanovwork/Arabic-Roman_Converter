@@ -20,24 +20,39 @@ namespace RomanArabic_Converter
         static void Main(string[] args)
         {
             int arabicNumber;
-            string entryLine = Console.ReadLine();
+            string entryLine = string.Empty;
 
-            if (int.TryParse(entryLine, out arabicNumber) && arabicNumber >= 1 & arabicNumber <= 500)
+            while (true)
             {
-                string convertedRomanNumber = string.Empty;
+                entryLine = Console.ReadLine();
+                if (!entryLine.ToCharArray().Select(char.IsPunctuation).Any(el => el == true)
+                    && !entryLine.ToCharArray().Select(char.IsSeparator).Any(el => el == true))
+                {
+                    if (int.TryParse(entryLine, out arabicNumber) && arabicNumber >= 1 & arabicNumber <= 500)
+                    {
+                        string convertedRomanNumber = string.Empty;
 
-                convertedRomanNumber += CalculateRomanNumber(arabicNumber / 100, 2);
-                convertedRomanNumber += CalculateRomanNumber(((arabicNumber % 100) - (arabicNumber % 10)) / 10, 1);
-                convertedRomanNumber += CalculateRomanNumber(arabicNumber % 10, 0);
+                        convertedRomanNumber += CalculateRomanNumber(arabicNumber / 100, 2);
+                        convertedRomanNumber += CalculateRomanNumber(((arabicNumber % 100) - (arabicNumber % 10)) / 10, 1);
+                        convertedRomanNumber += CalculateRomanNumber(arabicNumber % 10, 0);
 
-                Console.WriteLine(convertedRomanNumber);
+                        Console.WriteLine(convertedRomanNumber);
+                    }
+                    else
+                    {
+                        //roman -> arabic
+                        //int convertedNumber = CalculateArabDigits(entryLine.ToUpper());
+                        Console.WriteLine(CalculateArabDigits(entryLine.ToUpper()));
+                    }
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Try again, only letters or digits are accepted!");
+                }
             }
-            else
-            {
-                //roman -> arabic
-                //int convertedNumber = CalculateArabDigits(entryLine.ToUpper());
-                Console.WriteLine(CalculateArabDigits(entryLine.ToUpper()));
-            }
+
+
         }
 
         private static string CalculateRomanNumber(int entryNumber, int digitPosition)
@@ -79,7 +94,7 @@ namespace RomanArabic_Converter
 
             for (int i = 0; i < entryRomanNumber.Length; i++)
             {
-                if (!char.IsPunctuation(entryRomanNumber.ElementAtOrDefault(i)) && !char.IsSeparator(entryRomanNumber.ElementAtOrDefault(i)))
+                if (!char.IsDigit(entryRomanNumber.ElementAtOrDefault(i)))
                 {
                     // I, X, C
                     if (entryRomanNumber.ElementAtOrDefault(i) == romanNumbers.Keys.FirstOrDefault()
@@ -109,7 +124,10 @@ namespace RomanArabic_Converter
                     }
 
                     convertedArabicNumber += romanNumbers[entryRomanNumber.ElementAtOrDefault(i)];
+                    continue;
                 }
+
+                Console.WriteLine(entryRomanNumber.ElementAtOrDefault(i) + " - ignored");
             }
 
             return convertedArabicNumber;
